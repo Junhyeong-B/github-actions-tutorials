@@ -24,9 +24,10 @@ count = count_problem()
 HEADER = """# 
 # 제목을 쓰자
 # Readme.md 자동 추가
-# 현재까지 푼 문제 수: {count}개
 ---
 """
+HEADER += f'# 현재까지 푼 문제 수: {count}개\n'
+print(HEADER)
 
 
 def main():
