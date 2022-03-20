@@ -26,8 +26,8 @@ HEADER = """#
 # Readme.md 자동 추가
 ---
 """
+
 HEADER += f'# 현재까지 푼 문제 수: {count}개\n'
-print(HEADER)
 
 
 def main():
