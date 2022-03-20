@@ -17,7 +17,6 @@ def main():
             if extention == "js" or extention == "ts":
                 fileSource = root + "/" + file
                 newFilenameDirectory = root + "/" + filename
-                print(fileSource)
                 if os.path.isdir(newFilenameDirectory):
                     continue
 

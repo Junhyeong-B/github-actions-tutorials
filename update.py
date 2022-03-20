@@ -1,9 +1,30 @@
 import os
 from urllib import parse
 
+
+def count_problem():
+    count = 0
+    for root, dirs, files in os.walk("."):
+        dirs.sort()
+        if root == '.':
+            for dir in ('.git', '.github', "folder"):
+                try:
+                    dirs.remove(dir)
+                except ValueError:
+                    pass
+            continue
+        print(len(dirs))
+        if len(dirs) == 0:
+            count += len(files)
+    return count
+
+
+count = count_problem()
+
 HEADER = """# 
 # 제목을 쓰자
 # Readme.md 자동 추가
+# 현재까지 푼 문제 수: {count}개
 ---
 """
 
